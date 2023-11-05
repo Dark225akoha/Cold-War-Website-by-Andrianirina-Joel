@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New World</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/aos.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="colonne gauche">
+            <img class="image-art1" src="./assets/images/1-1.png" onclick="onClick(this)">
+            <img class="image-art2" src="./assets/images/1-2.png" onclick="onClick(this)">
+            <img class="image-art1-col1" src="./assets/images/2-1.png" alt="" onclick="onClick(this)">
+            <img class="image-art2-col2" src="./assets/images/2-2.png" alt="" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom" style="width: 20%;">
+              <img id="img01" style="width:100%">
+            </div>
+          </div>
+        <div class="colonne droite">
+            <div class="article1-style">
+                <h4>Early Signs <br />
+                    1945 – 1953</h4>
+                <img class="image-article1" src="assets/images/icône texte 1.png" alt="">
+                <p>Ahhh, who knew that former allies would turn into bitter rivals? Well, that was bound to happen
+                    anyway. When two superpowers have the world under their thumbs, when they are the two
+                    remaining strongest lads when the curtains fall down, there are bound to be issues. And issues there
+                    was. Two absolute savages, Joseph Stalin and Harry Truman, from the Soviet Union and the United
+                    States respectively, started to show their teeth like dogs behind fences. They had the armies, the
+                    technology, the firepower, the motivation and the economy to go at each other now. But they
+                    weren’t going to clap each other’s faces like a Russian face slap tournament. They were about to
+                    play a game, the one scoring the highest would be the one that had the most countries on its side.  <br />
+                    Former colonial powers were out of the equation (France, Great Britain, Germany, Italy) and their
+                    former empires were rising as they had weakened masters from then on. Guess what was about to
+                    happen? They’d ask for independence! But before all that chit chat, a war was looming in the
+                    horizon. See, after Japanese occupation, Korea was divided in two sides. And behind the borders of
+                    the northern Korea, stood another empire that started to awaken: China. Meanwhile, the whole
+                    area was also disputed by Americans who wanted to have their own dominion in the region as
+                    they occupied Japan and had their goons in South Korea. What happened next? With China and
+                    the USSR’s instigation, North Korea attacked. I mean… who wouldn’t? Your country is divided in two
+                    and foreigners have the control of it, threatening not only your national unity but also China was
+                    not
+                    fond of having Americans at its doorstep, they needed to make a case or at least have a country
+                    between them and the Americans. And the north managed to do serious damages as they pushed
+                    all the way through the south, finally being stopped by American forces at the 17 th parallel (where
+                    both countries are separated to this day).</p>
+                <img class="image-article1" src="assets/images/icône texte 2.png" alt="">
+                <p>Also Germany was divided in two. East Germany and West Germany, one side with the Western Block and the other with the Soviets. And both sides threw jabs at each other, like “haha I’m better than you”. But hey, to show how better they was, the soviets built a wall around East Germany, now everyone is trapped in a golden cage! Didn’t stop East German from fleeing tho. As the Soviets were holding all their satellite states under an iron grip, there were unhappy people in some states, more than others. One example, the Hungarian revolution. Didn’t end well. 
+                    <br /> As these events occurred, kilometres away, in Asia, India was asking for its independence but the Brits said no. So, they started doing nothing. That pissed off the brits so much they gave independence to India. So, you know, doing nothing can be very helpful. That is until the whole nation is divided in two between religious groups and History taught us that religious clashes are never peaceful.
+                    <br /> The United Nations are also created and Israel is established as a nation in the Middle East. That topic is highly sensitive so I won’t last on the subject. But one major event was at play in China. It was a big country, with a big population, it would be catastrophic if a civil war erupted… and it did. The Communist forces clashed with the Nationalist factions, a revolution occurred and the nationalists were wiped out, eventually establishing in Taiwan and these sore losers went on to rampage through the natives because they lost in the mainland. Talk about passing your anger on weaker than thou. But hey, a new chapter is rising and that is the Death of Stalin…
+                    
+                </p>
+                <a href="index.html" style="float: right;">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="./gsap/ScrollTrigger.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

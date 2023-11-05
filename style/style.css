@@ -1,0 +1,358 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #111111;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Put image background here cause can't even download there */
+    background-image: url(../assets/image1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+#home img {
+    position: absolute;
+    object-fit: contain;
+    /* width: 100%; */
+    height: 100%;
+}
+
+#home img:nth-child(1) {
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#home img:nth-child(4) {
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#home img:nth-child(2),
+#home img:nth-child(3) {
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+#home img:nth-child(2) {
+    width: 40%;
+    height: 40%;
+    top: 5%;
+    /* z-index: 5; */
+}
+
+#home img:nth-child(3) {
+    height: 70%;
+    bottom: 0;
+    z-index: 3;
+}
+
+/* One section for the article lookbook  */
+
+.menu {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.menu .articles {
+    position: relative;
+    width: 34%;
+    transition: .8s;
+    transform: translateY(-100%);
+    /* animation : easy scroll down; */
+}
+
+.menu .articles .overlay-articles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #10005080;
+    transition: .6s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.menu .articles:hover .overlay-articles {
+    opacity: 1;
+}
+
+.menu .articles .informations {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* padding: 0 2%; */
+    gap: 25px;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    transition: .4s;
+    z-index: 3;
+}
+
+.menu .articles:hover .informations {
+    opacity: 1;
+}
+
+.menu .articles .informations h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-left: 5%;
+    color: #fff;
+    transition: .8s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.menu .articles:hover .informations h1 {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.menu .articles .informations hr {
+    width: 0;
+    height: 5px;
+    background: rgb(174, 0, 0);
+    transition: .9s;
+    border: none;
+}
+
+.menu .articles:hover .informations hr {
+    width: 50%;
+}
+
+.menu .articles .informations .textInfo {
+    align-self: center;
+    width: 70%;
+    color: #d2d2d2;
+}
+
+.menu .articles img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Last part with image */
+.footer {
+    display: flex;
+    width: 1%;
+    height: 1vh;
+}
+
+.footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Was supposed to add conversation in here :( */
+#conversations .conv-img {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    gap: 20px;
+    overflow: hidden;
+}
+
+#conversations .conv-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* Responsive part  */
+@media (max-width : 950px) {
+    #home img:nth-child(1) {
+        height: 100%;
+        width: 60%;
+        /* bottom: -15%; */
+    }
+
+    #home img:nth-child(4) {
+        height: 100%;
+        width: 45%;
+        bottom: 0;
+    }
+}
+
+@media (max-width : 650px) {
+
+    #home img:nth-child(1),
+    #home img:nth-child(4) {
+        display: none;
+    }
+
+    #home img:nth-child(3) {
+        height: 50%;
+    }
+
+}
+
+@keyframes defiler {
+    to {
+        transform: translateY(0);
+    }
+}
+/* Few corrections */
+a {
+    color: #FFFF;
+}
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+/* Styling for each column */
+.colonne {
+    width: 48%; /* Leaving few spacing between columns for width purposes */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 5px;
+}
+
+/* Specific styling for left column */
+.gauche {
+    background-image: url(../assets/images/background\ image\ de\ gauche\ 1.jpg);
+    background-size: 100%;
+}
+
+/* Specific styling for right column */
+.droite {
+    background-color: #f2f2f2;
+}
+h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+}
+.article1-style{
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+.image-article1{
+    width: 12%;
+    margin-left: 45%;
+    margin-bottom: 2%;
+}
+.image-art1{
+    /* width: 24%;
+    float: left;
+    cursor:pointer;
+    position: fixed;
+    animation: slideRight 3s forwards; */
+    width: 13%;
+    float: left;
+    position: fixed;
+    left: 0;
+    margin-bottom: 0.5%;
+    cursor:pointer;
+    animation: slideRight 3s forwards;
+}
+.image-art1-col1{
+    width: 13%;
+    float: left;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0.5%;
+    cursor:pointer;
+    animation: slideRight 3s forwards;
+}
+.image-art2{
+    /* width: 28%;
+    float: right;
+    cursor:pointer;
+    position: fixed;
+    animation: slideLeft 2s forwards; */
+    width: 16%;
+    float: right;
+    position: fixed;
+    right: 50%;
+    margin-bottom: 1%;
+    cursor:pointer;
+    animation: slideLeft 2s forwards;
+}
+.image-art2-col2{
+    width: 16%;
+    float: right;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    margin-bottom: 1%;
+    cursor:pointer;
+    animation: slideLeft 2s forwards;
+}
+.image-art3{
+    width: 12%;
+    float: right;
+    position: fixed;
+    right: 50%;
+    margin-bottom: 1%;
+    cursor: pointer;
+    animation: slideLeft 2s forwards;
+    margin-top: 9px;
+}
+.image-art2-col2-6-2{
+    width: 12%;
+    float: right;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    margin-bottom: 1%;
+    cursor:pointer;
+    animation: slideLeft 3s forwards;
+}
+p{
+    font-size: 12px;
+}
+.modal-stl{
+    width: 20% !important;
+}#home1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Put image background here cause i can't even download there */
+    /* background-image: url(../assets/image1.jpg); */
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(0); /* Starting position */
+    }
+    100% {
+        transform: translateX(70%); /* Ending position (moving to the right) */
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0); /* Starting position */
+    }
+    100% {
+        transform: translateX(-80%); /* Ending position (moving to the left) */
+    }
+}
+
+  
+  

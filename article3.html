@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New World</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/aos.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="colonne gauche">
+            <img class="image-art1" src="./assets/images/5-1.png" onclick="onClick(this)">
+            <img class="image-art3" src="./assets/images/5-2.png" onclick="onClick(this)">
+            <img class="image-art1-col1" src="./assets/images/6-1.png" alt="" onclick="onClick(this)">
+            <img class="image-art2-col2-6-2" src="./assets/images/6-2.png" alt="" onclick="onClick(this)">
+        
+            <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                <div class="w3-modal-content w3-animate-zoom" style="width: 20%;">
+                  <img id="img01" style="width:100%">
+                </div>
+              </div>
+        </div>
+        <div class="colonne droite">
+            <div class="article1-style">
+                <h4>The Final Years <br />
+                    1975 – 1991</h4>
+                <img class="image-article1" src="assets/images/icône texte 6.png" alt="">
+                <p>The USSR were not inactive while the US was fighting in Vietnam. They went into Afghanistan, invading the country to install their own puppet government but like a reverse Vietnam, they got clapped by fierce resistance as the US was laughing in the back. And the latter was also laughing in the 70s, having installed military dictatorships all over Latin America to “eradicate communism” and killing countless civilians trained by the CIA and Israeli agents. Operation Condor. The most prominent victims of that dirty operation? Salvador Allende, a man who was sabotaged by the own elite of the Chilean nation and replaced in a US-backed coup by a murderous pig named Pinochet. Well, things got bloody and to this day, people are wondering where are all those who “disappeared” during the dictator’s brutal rule. Other countries in Latin America suffered the same fate, Brazil, Argentina, Bolivia, Paraguay… all, in the name of stopping communism, imposed a terrifying death toll on civilians, students, peasants, workers, teachers and even few members of the clergy. 
+                    <br /> But hey, Africa was going through tough times too as South Africa was engulfed in a dirty clandestine war against the Apartheid. A man, a hero would bore the brunt of the regime’s unfair racism and be elevated as a champion of justice and fairness, Nelson Mandela. Anyway, the southern part of Africa, like teenage girl in her mood, was going through dark times. Bush wars, Rhodesia, covert operations, it was not nice. And even messier in the Western part of Africa between Liberia and Nigeria with civil wars and warlords making a name for themselves in the depth of the bloody mess. 
+                </p>
+                <img class="image-article1" src="assets/images/icône texte 7.png" alt="">
+                <p>
+                    Remember the shah of Iran who ousted Mossadegh and sold back oil companies to the Brits? Well, bro became highly unpopular (as expected) and was in turn, ousted by religious extremists, after holding a luxury banquet in the desert for foreign dignitaries as his country was going through economic tough times. What did he expect? He got ousted too! And the US president, Jimmy Carter, was not keen on giving his hand to the exiled shah despite being “besties”. Carter ignored the dude and let him rot in a US hospital before being force to get him out of the US because the Americans were also hating on the Shah. The Shah ended in a small Caribbean island, under the care of a Marxist nurse who took pleasure in roasting the sickly king day and night, that special care given by the leader of the Dominican Republic who was not fond of the Shah either despite being on the same side of the US
+                   <br />
+                    The Soviets were also struggling financially, the US new president pushing military expenses to new heights. Moscow was having none of it and the Afghanistan war didn’t help the treasury either. After series of defeats, the Soviet pulled out of Afghanistan as the Berlin wall finally collapsed in 1991, after a speech by the last leader, Gorbachev, of the USSR being cancelled for good.
+                </p>
+                <a href="index.html" style="float: right;">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="./gsap/ScrollTrigger.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
